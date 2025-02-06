@@ -127,3 +127,22 @@ UNION ALL
   ORDER BY total_employees DESC
   LIMIT 1
 );
+
+Create Table Persons(
+	ID int not null,
+    LastName varchar(255) NOT NULL,
+	FirstName varchar(255) NOT NULL,
+	Age int
+);
+
+Alter table persons
+add unique(ID);
+
+Create Table Persons1(
+	ID int primary key,
+    LastName varchar(255) NOT NULL unique,
+	FirstName varchar(255) NOT NULL unique,
+	Age int,
+    #primary key(ID)
+);
+desc Persons1;
